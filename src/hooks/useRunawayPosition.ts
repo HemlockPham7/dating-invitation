@@ -104,7 +104,7 @@ export function pickRunawayPosition({
 }
 
 /** Reserve enough width for the longest teasing label so it never overflows after changing text. */
-const MIN_BUTTON_BUDGET: Size = { width: 280, height: 52 };
+const MIN_BUTTON_BUDGET: Size = { width: 380, height: 52 };
 
 interface UseRunawayPositionArgs {
   buttonRef: RefObject<HTMLElement>;

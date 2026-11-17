@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useRunawayPosition } from '../../hooks/useRunawayPosition';
 
 interface RunawayButtonProps {
-  /** messages[0] is the initial label; the rest rotate on every escape */
+  /** messages[0] is the initial label; cycles through 1..N then returns to messages[0] */
   messages: string[];
   /** The "Đồng ý" button — the runaway button never lands on it */
   avoidRef: RefObject<HTMLElement>;
@@ -16,8 +16,8 @@ const baseClass =
   'whitespace-nowrap rounded-full border border-taupe/40 bg-cream-50/80 px-7 py-3 text-sm font-medium tracking-wide text-taupe backdrop-blur-sm transition-colors hover:border-taupe/60';
 
 const pickLabel = (messages: string[], count: number) => {
-  if (count === 0 || messages.length < 2) return messages[0];
-  return messages[1 + ((count - 1) % (messages.length - 1))];
+  if (messages.length === 0) return '';
+  return messages[count % messages.length];
 };
 
 export function RunawayButton({ messages, avoidRef, onEscape }: RunawayButtonProps) {
