@@ -72,23 +72,25 @@ flowchart LR
 
 ### Danh sách Task (Phase 3)
 
-- [ ] **Task 3.1 — Xây dựng Custom Hook `useRunawayPosition` (`src/hooks/useRunawayPosition.ts`)**
+> ✅ **Trạng thái: HOÀN THÀNH (17/11)** — `npm run build` pass. Thuật toán vị trí được stress-test 50.000 lần nhảy (5 kích thước màn hình × 500 lượt × 20 lần bấm): 0 lần tràn khỏi màn hình/vùng đệm 48px, 0 lần đè nút "Đồng ý", 0 lần nhảy < 150px. Ghi chú kỹ thuật: nút "Từ chối" sau lần né đầu tiên được render qua `createPortal` vào `document.body` (tránh lỗi `position: fixed` bị lệch khi nằm trong phần tử cha có `transform`) và di chuyển bằng `transform x/y` (GPU). `App.tsx` đã nối `InvitationGate`; màn hình sau khi bấm "Đồng ý" tạm thời là placeholder cho tới Phase 4/Task 5.3.
+
+- [x] **Task 3.1 — Xây dựng Custom Hook `useRunawayPosition` (`src/hooks/useRunawayPosition.ts`)**
   - **Mô tả:**
     - Viết thuật toán sinh tọa độ `(x, y)` ngẫu nhiên trong vùng an toàn của `window.innerWidth` và `window.innerHeight` (trừ kích thước nút và lề an toàn `48px`).
     - Kiểm tra khoảng cách tối thiểu (`>= 150px`) so với vị trí hiện tại để nút nhảy dứt khoát.
     - Kiểm tra chống va chạm (collision detection) để nút "Từ chối" không bao giờ nhảy đè lên nút "Đồng ý".
     - Tự động reset về vùng an toàn nếu người dùng thay đổi kích thước cửa sổ trình duyệt (`resize` listener).
   - **Files đầu ra:** `src/hooks/useRunawayPosition.ts`.
-- [ ] **Task 3.2 — Xây dựng Component `RunawayButton` (`src/components/invitation/RunawayButton.tsx`)**
+- [x] **Task 3.2 — Xây dựng Component `RunawayButton` (`src/components/invitation/RunawayButton.tsx`)**
   - **Mô tả:**
     - Sử dụng `<motion.button>` của Framer Motion với cấu hình lò xo (`type: 'spring', stiffness: 380, damping: 22`).
     - Kích hoạt nhảy vị trí ngay khi người dùng bấm (`onClick`) hoặc rê chuột vào (`onMouseEnter` trên Desktop).
     - Đếm số lần bấm/né để hiển thị các câu trêu đùa vui nhộn và làm nút "Đồng ý" nổi bật dần lên.
   - **Files đầu ra:** `src/components/invitation/RunawayButton.tsx`.
-- [ ] **Task 3.3 — Xây dựngTiện ích Pháo giấy & Tim bay (`src/utils/confetti.ts`)**
+- [x] **Task 3.3 — Xây dựng Tiện ích Pháo giấy & Tim bay (`src/utils/confetti.ts`)**
   - **Mô tả:** Tạo hàm `triggerBirthdayConfetti()` sử dụng `canvas-confetti` bắn pháo giấy hai bên màn hình với bảng màu `#D9778B`, `#F4D5DC`, `#FFD166`, `#FFFFFF`.
   - **Files đầu ra:** `src/utils/confetti.ts`.
-- [ ] **Task 3.4 — Xây dựng Màn hình `InvitationGate` (`src/components/invitation/InvitationGate.tsx`)**
+- [x] **Task 3.4 — Xây dựng Màn hình `InvitationGate` (`src/components/invitation/InvitationGate.tsx`)**
   - **Mô tả:**
     - Thiết kế giao diện bìa lời mời kiểu tạp chí/portfolio với khung viền mảnh tinh tế, badge `13.12 • BIRTHDAY INVITATION`, tiêu đề lớn dành cho Gia Hân và 2 nút hành động.
     - Kết nối sự kiện bấm nút **"Đồng ý"** -> gọi `triggerBirthdayConfetti()` -> chuyển cảnh sang màn hình Timeline.
