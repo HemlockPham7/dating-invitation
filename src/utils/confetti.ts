@@ -1,54 +1,95 @@
 import confetti from 'canvas-confetti';
 
-const COLORS = ['#D9778B', '#F4D5DC', '#FFD166', '#FFFFFF', '#E8B4C0'];
+const COLORS = ['#D9778B', '#F4D5DC', '#FFD166', '#FF8FA3', '#FFFFFF', '#E8B4C0'];
 
-const HEART_PATH =
-  'M167 72c19,-38 37,-56 75,-56 42,0 76,33 76,75 0,76 -76,151 -151,227 -76,-76 -151,-151 -151,-227 0,-42 33,-75 75,-75 38,0 57,18 76,56z';
+let confettiInstance: confetti.CreateTypes | null = null;
 
-let heartShape: confetti.Shape | null = null;
-const getHeart = () => (heartShape ??= confetti.shapeFromPath({ path: HEART_PATH }));
-
-/**
- * Two side-cannons of confetti + hearts for ~1.6s, plus a center heart burst.
- * Automatically skipped for users who prefer reduced motion.
- */
-export function triggerBirthdayConfetti(durationMs = 1600) {
-  const end = Date.now() + durationMs;
-  const shapes: confetti.Shape[] = ['circle', 'square', getHeart()];
-
-  confetti({
-    particleCount: 70,
-    spread: 100,
-    startVelocity: 38,
-    origin: { x: 0.5, y: 0.55 },
-    colors: COLORS,
-    shapes: [getHeart()],
-    scalar: 1.4,
-    disableForReducedMotion: true,
-  });
-
-  const frame = () => {
-    confetti({
-      particleCount: 4,
-      angle: 60,
-      spread: 60,
-      origin: { x: 0, y: 0.7 },
-      colors: COLORS,
-      shapes,
-      disableForReducedMotion: true,
+function getConfetti(): confetti.CreateTypes {
+  if (!confettiInstance) {
+    confettiInstance = confetti.create(undefined, {
+      resize: true,
+      useWorker: false,
     });
-    confetti({
-      particleCount: 4,
-      angle: 120,
-      spread: 60,
-      origin: { x: 1, y: 0.7 },
-      colors: COLORS,
-      shapes,
-      disableForReducedMotion: true,
-    });
-    if (Date.now() < end) requestAnimationFrame(frame);
-  };
-
-  requestAnimationFrame(frame);
+  }
+  return confettiInstance;
 }
 
+const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
+
+/**
+ * Triggers a vibrant combination of center burst, side confetti cannons,
+ * and 360-degree radial firework explosions across the screen.
+ */
+export function triggerBirthdayConfetti(durationMs = 2200) {
+  const fire = getConfetti();
+
+  // 1. Immediate center celebratory burst
+  void fire({
+    particleCount: 90,
+    spread: 100,
+    startVelocity: 45,
+    origin: { x: 0.5, y: 0.65 },
+    colors: COLORS,
+    scalar: 1.15,
+    zIndex: 9999,
+  });
+
+  // 2. Left & right side cannons
+  void fire({
+    particleCount: 55,
+    angle: 60,
+    spread: 65,
+    startVelocity: 50,
+    origin: { x: 0, y: 0.75 },
+    colors: COLORS,
+    zIndex: 9999,
+  });
+
+  void fire({
+    particleCount: 55,
+    angle: 120,
+    spread: 65,
+    startVelocity: 50,
+    origin: { x: 1, y: 0.75 },
+    colors: COLORS,
+    zIndex: 9999,
+  });
+
+  // 3. Staggered 360° firework bursts in the upper half of the screen
+  const end = Date.now() + durationMs;
+  const interval = window.setInterval(() => {
+    const timeLeft = end - Date.now();
+    if (timeLeft <= 0) {
+      window.clearInterval(interval);
+      return;
+    }
+
+    const particleCount = Math.round(55 * (timeLeft / durationMs) + 25);
+
+    // Left-side sky firework burst
+    void fire({
+      particleCount,
+      startVelocity: 32,
+      spread: 360,
+      ticks: 70,
+      gravity: 0.85,
+      origin: { x: randomInRange(0.15, 0.42), y: randomInRange(0.18, 0.48) },
+      colors: COLORS,
+      scalar: randomInRange(0.95, 1.25),
+      zIndex: 9999,
+    });
+
+    // Right-side sky firework burst
+    void fire({
+      particleCount,
+      startVelocity: 32,
+      spread: 360,
+      ticks: 70,
+      gravity: 0.85,
+      origin: { x: randomInRange(0.58, 0.85), y: randomInRange(0.18, 0.48) },
+      colors: COLORS,
+      scalar: randomInRange(0.95, 1.25),
+      zIndex: 9999,
+    });
+  }, 320);
+}

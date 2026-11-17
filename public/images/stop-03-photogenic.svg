@@ -5,7 +5,7 @@
     <rect x="228" y="80" width="154" height="105" fill="#E8B4C0"/>
     <rect x="228" y="197" width="154" height="105" fill="#D9778B"/>
     <rect x="228" y="314" width="154" height="105" fill="#F4D5DC"/>
-    <text x="305" y="470" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="26" fill="#2C2220">Gia Hân</text>
+    <text x="305" y="470" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="26" fill="#2C2220">Bé Hân</text>
     <text x="305" y="505" text-anchor="middle" font-family="monospace" font-size="16" letter-spacing="4" fill="#7A6A66">13.12</text>
     <g fill="#FDFBF7"><circle cx="305" cy="125" r="22"/><circle cx="305" cy="245" r="22"/><circle cx="305" cy="360" r="22"/></g>
   </g>

@@ -4,12 +4,12 @@ const mapsSearch = (query: string) =>
   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 
 export const invitationConfig: InvitationConfig = {
-  recipientName: 'Gia Hân',
+  recipientName: 'Bé Hân',
   occasionDate: '13 / 12',
   occasionTitle: 'Birthday Date Invitation',
-  heroHeadline: 'Gia Hân ơi, ngày 13/12 này đi đón sinh nhật cùng mình nhé?',
+  heroHeadline: 'Bé Hân ơi, ngày 13/12 này đi đón sinh nhật cùng Việt Hoàng nhé?',
   heroSubtext:
-    'Mình đã chuẩn bị sẵn một hành trình nho nhỏ — không vội vàng, không giờ giấc, chỉ có bạn, mình và những điều dễ thương.',
+    'Việt Hoàng đã chuẩn bị sẵn một hành trình nho nhỏ — không vội vàng, không giờ giấc, chỉ có bé Hân, Việt Hoàng và những điều dễ thương.',
   evasiveMessages: [
     'Từ chối',
     'Ơ kìa, bấm nhầm rồi!',
@@ -29,10 +29,10 @@ export const timelineStops: TimelineStop[] = [
     id: 'pickup',
     stepNumber: '01',
     categoryTag: 'THE PICK-UP',
-    title: 'Đón Gia Hân',
+    title: 'Đón Bé Hân',
     subtitle: 'Mở màn ngày đặc biệt',
     description:
-      'Khởi đầu ngày sinh nhật 13/12. Mình sẽ qua tận nơi đón nhân vật chính của ngày hôm nay — cứ thong thả lên đồ thật xinh nha.',
+      'Khởi đầu ngày sinh nhật 13/12. Việt Hoàng sẽ qua tận nơi đón nhân vật chính của ngày hôm nay — bé Hân cứ thong thả lên đồ thật xinh nha.',
     imageUrl: '/images/stop-01-pickup.svg',
     imageAlt: 'Minh họa chiếc xe nhỏ chở trái tim đến đón',
     icon: 'car',
@@ -45,7 +45,7 @@ export const timelineStops: TimelineStop[] = [
     title: 'Ăn tối & Mừng sinh nhật',
     subtitle: 'Thổi nến, ước một điều',
     description:
-      'Một bữa tối ấm cúng, ngon miệng và cùng nhau thổi nến mừng tuổi mới của Gia Hân.',
+      'Một bữa tối ấm cúng, ngon miệng và cùng nhau thổi nến mừng tuổi mới của bé Hân.',
     locationName: 'Wok of Love — Quận 2',
     address: 'Quận 2, TP. Hồ Chí Minh',
     googleMapsUrl: mapsSearch('Wok of Love Quận 2 Hồ Chí Minh'),
@@ -89,10 +89,10 @@ export const timelineStops: TimelineStop[] = [
     id: 'home',
     stepNumber: '05',
     categoryTag: 'SAFE & SOUND',
-    title: 'Đưa Gia Hân về',
+    title: 'Đưa Bé Hân về',
     subtitle: 'Khép lại thật trọn vẹn',
     description:
-      'Đưa công chúa về tận nhà an toàn, khép lại buổi hẹn sinh nhật 13/12 thật trọn vẹn và ấm áp.',
+      'Đưa bé Hân về tận nhà an toàn, khép lại buổi hẹn sinh nhật 13/12 thật trọn vẹn và ấm áp.',
     imageUrl: '/images/stop-05-home.svg',
     imageAlt: 'Minh họa ngôi nhà nhỏ với trái tim',
     icon: 'home-heart',

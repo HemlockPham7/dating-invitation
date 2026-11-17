@@ -136,16 +136,18 @@ flowchart LR
 
 ### Danh sách Task (Phase 5)
 
-- [ ] **Task 5.1 — Xây dựng Section Kết trang (`src/components/layout/BirthdayFinale.tsx`)**
+> ✅ **Trạng thái: HOÀN THÀNH (17/11)** — Hoàn thiện toàn bộ ứng dụng (`BirthdayFinale`, `FloatingAudio` với giai điệu Music Box *"Happy Birthday"* tích hợp sẵn bằng Web Audio API không phụ thuộc file ngoài, và `App.tsx` chuyển cảnh mượt với `AnimatePresence`). `npm run build` (`tsc -b && vite build`) và toàn bộ bài kiểm thử QA đều pass 100%.
+
+- [x] **Task 5.1 — Xây dựng Section Kết trang (`src/components/layout/BirthdayFinale.tsx`)**
   - **Mô tả:** Đặt ở điểm kết thúc của trục Timeline: hiển thị tấm thiệp chúc mừng sinh nhật Gia Hân (13/12), lời nhắn hẹn gặp mặt, và nút *"Bắn pháo hoa ăn mừng lần nữa 🎉"*.
   - **Files đầu ra:** `src/components/layout/BirthdayFinale.tsx`.
-- [ ] **Task 5.2 — Xây dựng Nút Điều khiển Nhạc nền (`src/components/layout/FloatingAudio.tsx`)**
+- [x] **Task 5.2 — Xây dựng Nút Điều khiển Nhạc nền (`src/components/layout/FloatingAudio.tsx`)**
   - **Mô tả:** Nút nổi thanh lịch ở góc dưới bên phải màn hình, cho phép bật/tắt giai điệu nhạc nền lãng mạn kèm hiệu ứng sóng nhạc/đĩa xoay nhẹ khi đang phát.
   - **Files đầu ra:** `src/components/layout/FloatingAudio.tsx`.
-- [ ] **Task 5.3 — Tích hợp Luồng chính trong `App.tsx` (`src/App.tsx`)**
+- [x] **Task 5.3 — Tích hợp Luồng chính trong `App.tsx` (`src/App.tsx`)**
   - **Mô tả:** Sử dụng `<AnimatePresence mode="wait">` của Framer Motion để chuyển đổi mượt mà giữa màn hình `InvitationGate` (trước khi bấm Đồng ý) và màn hình `TimelineView` (sau khi bấm Đồng ý), tự động cuộn lên đầu trang khi mở khóa lịch trình.
   - **Files đầu ra:** `src/App.tsx`.
-- [ ] **Task 5.4 — Kiểm thử Chất lượng (QA & Verification)**
+- [x] **Task 5.4 — Kiểm thử Chất lượng (QA & Verification)**
   - **Mô tả:**
     - Kiểm tra nút **"Từ chối"** bấm liên tục 20 lần trên màn hình Desktop: luôn nhảy mượt, không bao giờ tràn khỏi khung nhìn, không đè lên nút "Đồng ý".
     - Kiểm tra nút **"Đồng ý"**: nổ confetti mượt và chuyển sang trang Timeline.
