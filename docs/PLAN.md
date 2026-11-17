@@ -104,22 +104,24 @@ flowchart LR
 
 ### Danh sách Task (Phase 4)
 
-- [ ] **Task 4.1 — Xây dựng Header của trang Lịch trình (`src/components/layout/PortfolioHeader.tsx`)**
+> ✅ **Trạng thái: HOÀN THÀNH (17/11)** — `npm run build` pass. Đã hoàn thiện `PortfolioHeader`, `TimelineSpine` (trục giữa chạy màu theo `useScroll` + `useSpring`), `TimelineNode` (icon phát sáng khi cuộn tới + đường nối sang card), `TimelineCard` (khung ảnh 4:3, badge `STOP 0X`, địa chỉ & nút Google Maps cho Wok of Love Q2 và Photogenic Bình Thạnh), và `TimelineSection` (lưới CSS Grid 3 cột `grid-cols-[1fr_80px_1fr]` xen kẽ Trái – Phải kèm số thứ tự watermark đối xứng kiểu Lookbook/Portfolio).
+
+- [x] **Task 4.1 — Xây dựng Header của trang Lịch trình (`src/components/layout/PortfolioHeader.tsx`)**
   - **Mô tả:** Thiết kế phần mở đầu trang Timeline mang phong cách Portfolio cá nhân: tiêu đề *"Gia Hân's 13.12 Itinerary"*, dòng giới thiệu ngắn gọn rằng buổi hẹn không gò bó giờ giấc, kèm chỉ dẫn cuộn xuống (`Scroll to explore`).
   - **Files đầu ra:** `src/components/layout/PortfolioHeader.tsx`.
-- [ ] **Task 4.2 — Xây dựng Trục dọc giữa & Điểm nút (`TimelineSpine.tsx` & `TimelineNode.tsx`)**
+- [x] **Task 4.2 — Xây dựng Trục dọc giữa & Điểm nút (`TimelineSpine.tsx` & `TimelineNode.tsx`)**
   - **Mô tả:**
     - Tạo đường kẻ dọc ở chính giữa màn hình (`left-1/2 -translate-x-1/2`).
     - Áp dụng `useScroll` và `useSpring` của Framer Motion để vẽ đường thẳng màu hồng rose chạy từ trên xuống dưới theo vị trí cuộn trang.
     - Tạo `TimelineNode` nằm trên trục giữa ứng với mỗi chặng, hiển thị icon riêng của chặng đó và hiệu ứng phát sáng khi cuộn tới.
   - **Files đầu ra:** `src/components/timeline/TimelineSpine.tsx`, `src/components/timeline/TimelineNode.tsx`.
-- [ ] **Task 4.3 — Xây dựng Component `TimelineCard` (`src/components/timeline/TimelineCard.tsx`)**
+- [x] **Task 4.3 — Xây dựng Component `TimelineCard` (`src/components/timeline/TimelineCard.tsx`)**
   - **Mô tả:**
     - Thiết kế Card theo chuẩn Portfolio: ảnh minh họa bo góc, nhãn `STOP 01..05` + Tag chủ đề, tiêu đề hoạt động, lời nhắn ngọt ngào.
     - Hiển thị khối địa chỉ nổi bật và nút **"Xem trên Google Maps ↗"** cho **Wok of Love Quận 2** (Chặng 2) và **Photogenic Bình Thạnh - 490D Điện Biên Phủ** (Chặng 3).
     - Thêm hiệu ứng xuất hiện (`initial={{ opacity: 0, x: side === 'left' ? -50 : 50 }} whileInView={{ opacity: 1, x: 0 }}`).
   - **Files đầu ra:** `src/components/timeline/TimelineCard.tsx`.
-- [ ] **Task 4.4 — Lắp ráp Bố cục Xen kẽ Trái – Phải (`src/components/timeline/TimelineSection.tsx`)**
+- [x] **Task 4.4 — Lắp ráp Bố cục Xen kẽ Trái – Phải (`src/components/timeline/TimelineSection.tsx`)**
   - **Mô tả:**
     - Dựng lưới CSS Grid 3 cột (`grid-cols-[1fr_80px_1fr]`) cho Desktop để đặt Chặng 1, 3, 5 ở cột Trái và Chặng 2, 4 ở cột Phải, đối xứng qua trục giữa.
     - Ở phần không gian đối diện mỗi Card trên Desktop, thêm số thứ tự nghệ thuật kích thước lớn mờ (`01`..`05`) và nhãn phụ để trang trông giống một cuốn Lookbook/Portfolio thực thụ.
