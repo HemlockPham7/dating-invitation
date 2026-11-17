@@ -49,7 +49,7 @@ export function TimelineCard({ stop }: TimelineCardProps) {
           </div>
         )}
 
-        <p className="mt-5 text-[15px] leading-relaxed text-taupe">{stop.description}</p>
+        <p className="mt-5 text-[16.5px] leading-relaxed text-taupe">{stop.description}</p>
 
         {stop.googleMapsUrl && (
           <a

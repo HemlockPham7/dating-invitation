@@ -18,8 +18,8 @@ function Watermark({ stop }: { stop: TimelineStop }) {
       className={`select-none ${alignRight ? 'text-right' : 'text-left'}`}
       aria-hidden
     >
-      <p className="font-serif text-[9rem] font-medium leading-none text-blush-200">{stop.stepNumber}</p>
-      <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.35em] text-taupe">{stop.categoryTag}</p>
+      <p className="font-serif text-[8.1rem] font-medium leading-none text-blush-200">{stop.stepNumber}</p>
+      <p className="mt-2 font-mono text-[12.1px] uppercase tracking-[0.35em] text-taupe">{stop.categoryTag}</p>
     </motion.div>
   );
 }

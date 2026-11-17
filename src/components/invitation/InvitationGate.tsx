@@ -36,17 +36,17 @@ export function InvitationGate({ onAccept }: InvitationGateProps) {
 
       {/* Editorial corner marks */}
       <div aria-hidden className="pointer-events-none absolute inset-6 hidden border border-cream-200 md:block" />
-      <p className="absolute left-10 top-10 hidden font-mono text-[11px] uppercase tracking-[0.35em] text-taupe md:block">
+      <p className="absolute left-10 top-10 hidden font-mono text-[12.1px] uppercase tracking-[0.35em] text-taupe md:block">
         Vol. 13 — Birthday Edition
       </p>
-      <p className="absolute bottom-10 right-10 hidden font-mono text-[11px] uppercase tracking-[0.35em] text-taupe md:block">
+      <p className="absolute bottom-10 right-10 hidden font-mono text-[12.1px] uppercase tracking-[0.35em] text-taupe md:block">
         For {recipientName} • {occasionDate}
       </p>
 
       <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center text-center">
         <motion.span
           {...fadeUp(0.1)}
-          className="inline-flex items-center gap-2 rounded-full border border-rose-accent/30 bg-cream-50/70 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.3em] text-rose-accent"
+          className="inline-flex items-center gap-2 rounded-full border border-rose-accent/30 bg-cream-50/70 px-4 py-1.5 font-mono text-[12.1px] uppercase tracking-[0.3em] text-rose-accent"
         >
           <Heart className="h-3 w-3 fill-rose-accent" strokeWidth={0} />
           Special Invitation • 13.12
@@ -61,7 +61,7 @@ export function InvitationGate({ onAccept }: InvitationGateProps) {
 
         <motion.div {...fadeUp(0.4)} className="mt-8 h-px w-24 bg-rose-accent/50" />
 
-        <motion.p {...fadeUp(0.5)} className="mt-8 max-w-xl text-base leading-relaxed text-taupe md:text-lg">
+        <motion.p {...fadeUp(0.5)} className="mt-8 max-w-xl text-base leading-relaxed text-taupe md:text-[19.8px]">
           {heroSubtext}
         </motion.p>
 
@@ -84,7 +84,7 @@ export function InvitationGate({ onAccept }: InvitationGateProps) {
           <RunawayButton messages={evasiveMessages} avoidRef={acceptRef} onEscape={setEscapes} />
         </motion.div>
 
-        <motion.p {...fadeUp(0.85)} className="mt-10 font-mono text-[11px] uppercase tracking-[0.3em] text-taupe/70">
+        <motion.p {...fadeUp(0.85)} className="mt-10 font-mono text-[12.1px] uppercase tracking-[0.3em] text-taupe/70">
           {escapes === 0 ? 'Chọn một nha ✦' : `Đã né ${escapes} lần — vẫn chỉ có một đáp án thôi`}
         </motion.p>
       </div>

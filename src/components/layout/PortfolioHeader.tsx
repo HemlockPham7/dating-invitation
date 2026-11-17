@@ -8,7 +8,7 @@ export function PortfolioHeader() {
   return (
     <header className="relative px-6 pt-8">
       {/* Thin editorial top bar */}
-      <div className="mx-auto flex max-w-6xl items-center justify-between border-b border-cream-200 pb-4 font-mono text-[11px] uppercase tracking-[0.3em] text-taupe">
+      <div className="mx-auto flex max-w-6xl items-center justify-between border-b border-cream-200 pb-4 font-mono text-[12.1px] uppercase tracking-[0.3em] text-taupe">
         <span>{recipientName} • 13.12</span>
         <span className="hidden sm:inline">{timelineStops.length} Stops • No Clock</span>
       </div>
@@ -38,7 +38,7 @@ export function PortfolioHeader() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6 }}
-          className="mt-8 max-w-xl text-base leading-relaxed text-taupe md:text-lg"
+          className="mt-8 max-w-xl text-base leading-relaxed text-taupe md:text-[19.8px]"
         >
           Không giờ giấc, không vội vàng, cùng Việt Hoàng chơi nhé bé.
         </motion.p>
@@ -47,7 +47,7 @@ export function PortfolioHeader() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 1 }}
-          className="mt-16 flex flex-col items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em] text-taupe"
+          className="mt-16 flex flex-col items-center gap-2 font-mono text-[12.1px] uppercase tracking-[0.3em] text-taupe"
         >
           Scroll to explore
           <motion.span

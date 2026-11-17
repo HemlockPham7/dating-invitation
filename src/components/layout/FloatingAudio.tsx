@@ -144,7 +144,7 @@ export function FloatingAudio({ isPlaying, onToggle }: FloatingAudioProps) {
         <Disc3 className="h-3.5 w-3.5" />
       </motion.span>
 
-      <span className="hidden font-mono text-[11px] uppercase tracking-[0.2em] text-taupe sm:inline">
+      <span className="hidden font-mono text-[12.1px] uppercase tracking-[0.2em] text-taupe sm:inline">
         {isPlaying ? 'Birthday Melody' : 'Muted'}
       </span>
 

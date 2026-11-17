@@ -33,7 +33,7 @@ export function BirthdayFinale() {
           className="pointer-events-none absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-blush-100 blur-3xl"
         />
 
-        <p className="relative font-mono text-[11px] uppercase tracking-[0.35em] text-rose-accent">
+        <p className="relative font-mono text-[12.1px] uppercase tracking-[0.35em] text-rose-accent">
           Happy Birthday • {occasionDate}
         </p>
 
@@ -43,7 +43,7 @@ export function BirthdayFinale() {
 
         <div className="relative mx-auto mt-6 h-px w-20 bg-rose-accent/40" />
 
-        <p className="relative mx-auto mt-6 max-w-lg text-base leading-relaxed text-taupe md:text-[17px]">
+        <p className="relative mx-auto mt-6 max-w-lg text-base leading-relaxed text-taupe md:text-[18.7px]">
           Tuổi mới chúc bé Hân luôn rạng rỡ, xinh đẹp và ngập tràn những điều dịu dàng nhất.
           Hẹn gặp bé Hân vào ngày <strong className="font-semibold text-espresso">13/12</strong> để
           cùng Việt Hoàng đón tuổi mới cùng bé Hân nha!
@@ -67,7 +67,7 @@ export function BirthdayFinale() {
         </p>
       </motion.div>
 
-      <p className="mt-12 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-taupe/60">
+      <p className="mt-12 text-center font-mono text-[11px] uppercase tracking-[0.3em] text-taupe/60">
         Crafted with love for {recipientName} • 13.12 Birthday Edition
       </p>
     </footer>
