@@ -23,13 +23,15 @@ flowchart LR
 
 ### Danh sách Task (Phase 1)
 
-- [ ] **Task 1.1 — Khởi tạo Vite React TypeScript Project**
+> ✅ **Trạng thái: HOÀN THÀNH (17/11)** — `npm run build` pass (tsc + vite). Ghi chú: `lucide-react@0.450.0` không tồn tại trên npm nên dùng `^0.451.0` (đã cập nhật TECH_ARCHITECTURE.md); thêm `composite: true` vào `tsconfig.app.json`/`tsconfig.node.json` để tương thích TypeScript 5.5 project references. `App.tsx` hiện là màn hình placeholder kiểm tra design system, sẽ được thay ở Phase 3–5.
+
+- [x] **Task 1.1 — Khởi tạo Vite React TypeScript Project**
   - **Mô tả:** Khởi tạo cấu trúc project chuẩn Vite (`react-ts`), cấu hình `tsconfig.json`, `vite.config.ts` và cấu trúc thư mục `src/components`, `src/data`, `src/hooks`, `src/types`, `src/utils`.
   - **Files đầu ra:** `package.json`, `vite.config.ts`, `tsconfig.json`, `index.html`.
-- [ ] **Task 1.2 — Cài đặt các thư viện cốt lõi (Dependencies)**
+- [x] **Task 1.2 — Cài đặt các thư viện cốt lõi (Dependencies)**
   - **Mô tả:** Cài đặt `tailwindcss`, `postcss`, `autoprefixer`, `framer-motion`, `lucide-react`, `canvas-confetti`, và `@types/canvas-confetti`.
   - **Tiêu chí nghiệm thu:** Chạy lệnh build/dev không phát sinh lỗi thiếu package hay lỗi kiểu dữ liệu TypeScript.
-- [ ] **Task 1.3 — Thiết lập Typography & Bảng màu Romantic Editorial**
+- [x] **Task 1.3 — Thiết lập Typography & Bảng màu Romantic Editorial**
   - **Mô tả:**
     - Nhúng Google Fonts hỗ trợ tiếng Việt (`Cormorant Garamond`, `Plus Jakarta Sans`, `JetBrains Mono`) vào `index.html`.
     - Cấu hình `tailwind.config.js` với bảng màu kem ấm (`#FAF6F0`), hồng đất (`#D9778B`), hồng phấn (`#F9E8EC`), chữ nâu espresso (`#2C2220`).
@@ -44,10 +46,12 @@ flowchart LR
 
 ### Danh sách Task (Phase 2)
 
-- [ ] **Task 2.1 — Định nghĩa TypeScript Interfaces (`src/types/itinerary.ts`)**
+> ✅ **Trạng thái: HOÀN THÀNH (17/11)** — `tsc -b` pass; dữ liệu 5 chặng đã kiểm tra: đúng thứ tự, lẻ → `left`, chẵn → `right`, chỉ Chặng 02 & 03 có `googleMapsUrl`. Ghi chú: ảnh minh họa là **SVG local tự vẽ theo bảng màu** (`public/images/stop-0X-*.svg`) thay cho `.jpg` để không phụ thuộc link ngoài — có thể thay bằng ảnh thật bất cứ lúc nào chỉ bằng cách đổi `imageUrl` trong `itineraryData.ts`.
+
+- [x] **Task 2.1 — Định nghĩa TypeScript Interfaces (`src/types/itinerary.ts`)**
   - **Mô tả:** Tạo interface `TimelineStop`, `InvitationConfig`, `TimelineSide` (`'left' | 'right'`), và `StopIconType`.
   - **Files đầu ra:** `src/types/itinerary.ts`.
-- [ ] **Task 2.2 — Biên soạn dữ liệu 5 chặng & nội dung lời mời (`src/data/itineraryData.ts`)**
+- [x] **Task 2.2 — Biên soạn dữ liệu 5 chặng & nội dung lời mời (`src/data/itineraryData.ts`)**
   - **Mô tả:** Nhập dữ liệu chi tiết cho dịp sinh nhật **Gia Hân (13/12)**:
     1. **Chặng 01 (`left`):** Đón Gia Hân (`STOP 01 • THE PICK-UP`).
     2. **Chặng 02 (`right`):** Ăn tối & Mừng sinh nhật tại **Wok of Love Quận 2** (`STOP 02 • BIRTHDAY DINNER`) + URL Google Maps.
@@ -56,7 +60,7 @@ flowchart LR
     5. **Chặng 05 (`left`):** Đưa Gia Hân về (`STOP 05 • SAFE & SOUND`).
     - Kèm danh sách 8–10 câu thông điệp dễ thương thay đổi mỗi lần Gia Hân bấm vào nút "Từ chối".
   - **Files đầu ra:** `src/data/itineraryData.ts`.
-- [ ] **Task 2.3 — Chuẩn bị hình ảnh minh họa chất lượng cao cho 5 chặng**
+- [x] **Task 2.3 — Chuẩn bị hình ảnh minh họa chất lượng cao cho 5 chặng**
   - **Mô tả:** Thiết lập bộ ảnh minh họa thẩm mỹ (editorial photography / fallback Unsplash curated URLs hoặc ảnh local trong `public/images/`) cho từng chặng để card hiển thị đẹp ngay lập tức.
   - **Files đầu ra:** `src/data/itineraryData.ts`, `public/images/`.
 

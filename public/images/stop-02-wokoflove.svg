@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#FAF6F0"/>
+  <circle cx="400" cy="300" r="230" fill="#F9E8EC"/>
+  <ellipse cx="400" cy="470" rx="260" ry="34" fill="#F0E4DF"/>
+  <g transform="translate(400 0)">
+    <rect x="-150" y="330" width="300" height="130" rx="18" fill="#D9778B"/>
+    <path d="M-150 360 q25 30 50 0 q25 30 50 0 q25 30 50 0 q25 30 50 0 q25 30 50 0 q25 30 50 0 v-12 h-300 z" fill="#FDFBF7"/>
+    <rect x="-110" y="240" width="220" height="95" rx="16" fill="#E8B4C0"/>
+    <path d="M-110 262 q22 24 44 0 q22 24 44 0 q22 24 44 0 q22 24 44 0 q22 24 44 0 v-10 h-220 z" fill="#FDFBF7"/>
+    <g fill="#FDFBF7" stroke="#D9778B" stroke-width="3">
+      <rect x="-62" y="180" width="14" height="62" rx="4"/>
+      <rect x="-7" y="170" width="14" height="72" rx="4"/>
+      <rect x="48" y="180" width="14" height="62" rx="4"/>
+    </g>
+    <g fill="#FFD166">
+      <path d="M-55 175 q-10-16 0-30 q10 14 0 30z"/>
+      <path d="M0 165 q-10-16 0-30 q10 14 0 30z"/>
+      <path d="M55 175 q-10-16 0-30 q10 14 0 30z"/>
+    </g>
+    <text x="0" y="410" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="34" fill="#FDFBF7">13.12</text>
+  </g>
+  <g fill="#D9778B" opacity="0.5">
+    <circle cx="170" cy="150" r="6"/><circle cx="640" cy="130" r="8"/><circle cx="620" cy="220" r="5"/><circle cx="190" cy="250" r="5"/>
+  </g>
+</svg>
+

@@ -14,7 +14,7 @@ Dự án được xây dựng dưới dạng **Single Page Application (SPA) thu
 | **Styling** | **Tailwind CSS** | `^3.4.0` | Thiết kế nhanh hệ thống lưới (Grid 3 cột cho trục giữa + 2 bên trái/phải), dễ cấu hình bảng màu Romantic Editorial và font chữ. |
 | **Animation Engine** | **Framer Motion** | `^11.x` | Xử lý chuyển động lò xo (`spring`) cho nút "Từ chối" nhảy vị trí, hiệu ứng chuyển cảnh (`AnimatePresence`), và hiệu ứng vẽ trục timeline theo cuộn chuột (`useScroll`, `useSpring`). |
 | **Visual Effects** | **canvas-confetti** | `^1.9.3` | Tạo hiệu ứng pháo giấy / tim bay mượt mà trên `<canvas>` khi Gia Hân bấm "Đồng ý". |
-| **Icons** | **lucide-react** | `^0.450.0` | Bộ icon nét mảnh, thanh lịch, phù hợp hoàn hảo với phong cách Minimalist Portfolio. |
+| **Icons** | **lucide-react** | `^0.451.0` | Bộ icon nét mảnh, thanh lịch, phù hợp hoàn hảo với phong cách Minimalist Portfolio. |
 | **Deployment** | **Vercel / Netlify / GitHub Pages** | Static Hosting | Triển khai miễn phí qua Git, tự động tạo link HTTPS chia sẻ ngay cho Gia Hân. |
 
 ---
@@ -31,11 +31,11 @@ dating-invitation/
 │   ├── audio/
 │   │   └── birthday-bgm.mp3          # Nhạc nền nhẹ nhàng (tuỳ chọn thay thế)
 │   └── images/
-│       ├── stop-01-pickup.jpg        # Ảnh minh họa Chặng 1: Đón Gia Hân
-│       ├── stop-02-wokoflove.jpg     # Ảnh minh họa Chặng 2: Wok of Love Quận 2
-│       ├── stop-03-photogenic.jpg    # Ảnh minh họa Chặng 3: Photogenic Bình Thạnh
-│       ├── stop-04-dessert.jpg       # Ảnh minh họa Chặng 4: Dạo phố & Tráng miệng
-│       └── stop-05-home.jpg          # Ảnh minh họa Chặng 5: Đưa về
+│       ├── stop-01-pickup.svg        # Ảnh minh họa Chặng 1: Đón Gia Hân
+│       ├── stop-02-wokoflove.svg     # Ảnh minh họa Chặng 2: Wok of Love Quận 2
+│       ├── stop-03-photogenic.svg    # Ảnh minh họa Chặng 3: Photogenic Bình Thạnh
+│       ├── stop-04-dessert.svg       # Ảnh minh họa Chặng 4: Dạo phố & Tráng miệng
+│       └── stop-05-home.svg          # Ảnh minh họa Chặng 5: Đưa về
 ├── src/
 │   ├── components/
 │   │   ├── invitation/
