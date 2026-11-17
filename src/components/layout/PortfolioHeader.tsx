@@ -40,8 +40,7 @@ export function PortfolioHeader() {
           transition={{ duration: 0.7, delay: 0.6 }}
           className="mt-8 max-w-xl text-base leading-relaxed text-taupe md:text-lg"
         >
-          Không giờ giấc, không vội vàng — chỉ là {timelineStops.length} chặng nhỏ Việt Hoàng đã chuẩn bị, đi
-          theo nhịp của bé Hân.
+          Không giờ giấc, không vội vàng, cùng Việt Hoàng chơi nhé bé.
         </motion.p>
 
         <motion.div

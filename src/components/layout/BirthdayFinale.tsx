@@ -44,9 +44,9 @@ export function BirthdayFinale() {
         <div className="relative mx-auto mt-6 h-px w-20 bg-rose-accent/40" />
 
         <p className="relative mx-auto mt-6 max-w-lg text-base leading-relaxed text-taupe md:text-[17px]">
-          Tuổi mới chúc bé Hân luôn rạng rỡ, bình yên và ngập tràn những điều dịu dàng nhất.
+          Tuổi mới chúc bé Hân luôn rạng rỡ, xinh đẹp và ngập tràn những điều dịu dàng nhất.
           Hẹn gặp bé Hân vào ngày <strong className="font-semibold text-espresso">13/12</strong> để
-          cùng Việt Hoàng đi hết 5 chặng nhỏ này nhé!
+          cùng Việt Hoàng đón tuổi mới cùng bé Hân nha!
         </p>
 
         <div className="relative mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -58,7 +58,7 @@ export function BirthdayFinale() {
             className="inline-flex items-center gap-2.5 rounded-full bg-rose-accent px-7 py-3.5 text-sm font-semibold tracking-wide text-cream-50 shadow-[0_12px_30px_-10px_rgba(217,119,139,0.7)] transition-colors hover:bg-rose-accent/90"
           >
             <Sparkles className="h-4 w-4" />
-            Bắn pháo hoa ăn mừng lần nữa 🎉
+            Bắn pháo hoa 🎉
           </motion.button>
         </div>
 
